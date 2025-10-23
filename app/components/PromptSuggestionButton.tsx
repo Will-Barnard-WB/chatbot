@@ -1,11 +1,17 @@
-const PromptSuggestionBution = ( {text, onClick}) => {
-    return (
-        <button className='prompt-suggestion-button'
-            onClick={onClick}
-        >
-            {text}
-        </button>
-    )
-}
+type PromptSuggestionButtonProps = {
+  text: string;
+  onClick: () => void;
+};
 
-export default PromptSuggestionBution;
+const PromptSuggestionButton = ({ text, onClick }: PromptSuggestionButtonProps) => {
+  return (
+    <button
+      className="prompt-suggestion-button"
+      onClick={onClick}
+    >
+      {text}
+    </button>
+  );
+};
+
+export default PromptSuggestionButton;
